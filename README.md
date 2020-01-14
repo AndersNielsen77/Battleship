@@ -5,8 +5,9 @@
 
 ## Release History
 * 0.0.2
-    * Ny din tur knap (Skrifter farve).
-    * Chat størrelser.
+    * Your turn button (Changing color).
+    * Chat size.
+    * Executable jar files for Client and server. 
 * 0.0.1
     * Work in progress
     
