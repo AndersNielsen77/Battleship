@@ -20,5 +20,3 @@
 1. Anders Nielsen – s194299@student.dtu.dk 
 2. Mikkel Randrup Rahbek - s194298@student.dtu.dk 
 3. Mads Ptak - s194297@student.dtu.dk  
-
-[https://github.com/AndersNielsen77/Battleship](https://github.com/dbader/)
