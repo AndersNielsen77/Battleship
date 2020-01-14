@@ -4,6 +4,9 @@
 ![](header.png)
 
 ## Release History
+* 0.0.2
+    * Ny din tur knap (Skrifter farve).
+    * Chat størrelser.
 * 0.0.1
     * Work in progress
     
