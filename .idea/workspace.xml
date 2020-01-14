@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Battleship Client:jar" />
+      <artifact name="Battleship Server:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="333fccc7-506c-4f52-bdf3-704c598a4b81" name="Default Changelist" comment="" />
+    <list default="true" id="333fccc7-506c-4f52-bdf3-704c598a4b81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship Client/src/Battlefight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship Client/src/Battlefight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship Client/src/Battleplacement.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship Client/src/Battleplacement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Battleship_Client_jar/Battleship Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Battleship_Client_jar/Battleship Client.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Battleship_Server_jar/Battleship Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Battleship_Server_jar/Battleship Server.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +54,7 @@
       <recent name="C:\Users\Main\OneDrive - Roskilde Tekniske Skole\Uni\02101 Indledende Programmering\test\Battleship\src\Server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SkibServer">
+  <component name="RunManager" selected="Application.Start2">
     <configuration name="SkibServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SkibServer" />
       <module name="Battleship Server" />
@@ -69,8 +81,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Start2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Start2" />
+      <module name="Battleship Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Start2" />
         <item itemvalue="Application.SkibServer" />
         <item itemvalue="Application.Start" />
       </list>
@@ -98,7 +118,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579021277133</updated>
-      <workItem from="1579021280596" duration="4058000" />
+      <workItem from="1579021280596" duration="4809000" />
+      <workItem from="1579035234089" duration="2071000" />
     </task>
     <servers />
   </component>
@@ -114,25 +135,29 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579021561262" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1579026721691">
+    <state x="573" y="267" key="FileChooserDialogImpl" timestamp="1579038894450">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026721691" />
+    <state x="573" y="267" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579038894450" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1579027533696">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579027533696" />
     <state width="1637" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@1920.299.1680.1020" timestamp="1579026158950" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1579026721691">
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1579027533695">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026721691" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579027533695" />
     <state width="1637" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@1920.299.1680.1020" timestamp="1579026158950" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1579026721691">
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1579027533695">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026721691" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579027533695" />
     <state width="1637" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@1920.299.1680.1020" timestamp="1579026158950" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1579026721691">
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1579027533695">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026721691" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579027533695" />
     <state width="1637" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@1920.299.1680.1020" timestamp="1579026158950" />
     <state x="440" y="100" key="SettingsEditor" timestamp="1579026781429">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -142,9 +167,13 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="342" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026650952" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1579026731993">
+    <state x="616" y="243" key="run.anything.popup" timestamp="1579038886556">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579026731993" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579038886556" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1579038892208">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050/1920.299.1680.1020@0.0.1920.1050" timestamp="1579038892208" />
   </component>
 </project>

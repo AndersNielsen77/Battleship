@@ -10,8 +10,8 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
     public Plade plade;
     public JPanel contentnorth, contentsouth, contentcenter, contentwest, contenteast;
     public JButton submit, clear, quit, rotate, returnmenu;
-    public JButton carrier, battleship, cruiser, destroyer;
-    public int kc = 0, kb = 0, ks = 0, kh = 0;
+    public JButton carrier, battleship, cruiser, submarine, destroyer;
+    public int kc = 0, kb = 0, ks = 0, kt = 0, kh = 0;
     public int rotation = 0;
     public Battleships Carrier;
 
@@ -38,24 +38,28 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
         contentwest = new JPanel();
         contentwest.setLayout(new BoxLayout(contentwest, BoxLayout.Y_AXIS));
 
-        carrier = new JButton("   Carrier   ");
-        battleship = new JButton("Battleship");
-        cruiser = new JButton("  Cruiser   ");
-        destroyer = new JButton("Destroyer");
+        carrier = new JButton("    Carrier    ");
+        battleship = new JButton(" Battleship ");
+        cruiser = new JButton("   Cruiser    ");
+        submarine = new JButton("Submarine ");
+        destroyer = new JButton(" Destroyer ");
 
         carrier.setBackground(Color.GREEN);
         battleship.setBackground(Color.GREEN);
         cruiser.setBackground(Color.GREEN);
+        submarine.setBackground(Color.GREEN);
         destroyer.setBackground(Color.GREEN);
 
         contentwest.add(carrier);
         contentwest.add(battleship);
         contentwest.add(cruiser);
+        contentwest.add(submarine);
         contentwest.add(destroyer);
 
         carrier.addActionListener(this);
         battleship.addActionListener(this);
         cruiser.addActionListener(this);
+        submarine.addActionListener(this);
         destroyer.addActionListener(this);
 
         getContentPane().add(contentwest, BorderLayout.WEST);
@@ -126,7 +130,6 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
                             carrier.setBackground(Color.RED);
                             System.out.println(j + "" + i);
                         }
-
                     } else if (kb == 0) {
                         Battleships Battleship = new Battleships(4);
                         if (plade.placeShip(j, i, Battleship, rotation)) {
@@ -142,8 +145,15 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
                             System.out.println(j + "" + i);
                             cruiser.setBackground(Color.RED);
                         }
+                    } else if (kt == 0) {
+                        Battleships Submarine = new Battleships(2);
+                        if (plade.placeShip(j, i, Submarine, rotation)) {
+                            kt++;
+                            System.out.println(j + "" + i);
+                            submarine.setBackground(Color.RED);
+                        }
                     } else if (kh == 0) {
-                        Battleships Destroyer = new Battleships(2);
+                        Battleships Destroyer = new Battleships(1);
                         if (plade.placeShip(j, i, Destroyer, rotation)) {
                             kh++;
                             System.out.println(j + "" + i);
@@ -161,6 +171,9 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
                     fields[j][i].setBackground(Color.YELLOW);
                 } else if (Plade.getGrid(j, i) == 3) {
                     fields[j][i].setBackground(Color.GREEN);
+                    //Problem
+                //} else if (Plade.getGrid(j, i) == 3) {
+                //    fields[j][i].setBackground(Color.GREEN);
                 } else if (Plade.getGrid(j, i) == 2) {
                     fields[j][i].setBackground(Color.ORANGE);
                 }
@@ -175,6 +188,7 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
             kc = 0;
             ks = 0;
             kb = 0;
+            kt = 0;
             kh = 0;
             for (int j = 0; j < 10; j++) {
                 for (int i = 0; i < 10; i++) {
@@ -185,6 +199,7 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
             carrier.setBackground(Color.GREEN);
             battleship.setBackground(Color.GREEN);
             cruiser.setBackground(Color.GREEN);
+            submarine.setBackground(Color.GREEN);
             destroyer.setBackground(Color.GREEN);
         } else if (e.getSource() == rotate) {
             if (rotation == 0) {

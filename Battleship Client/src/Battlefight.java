@@ -1,21 +1,23 @@
 /*
-1. Forminsk chat i Ship placement samt skipe tekst.
+1. Forminsk chat i Ship placement samt skibe tekst.
 2. Fjerne to ekstra ships placement når man har supmit.
 3. Skriv i Battlefield om man har ramt.
-4. Auto scroll både battlefield og ships placement.
+4. Auto scroll både battlefield og ships placement. (Semi DONE - Resize mangler)
 5. Ny din tur knap (Skrifter farve). (DONE)
 6. Skibe bliver rød når de er døde.
 7. Skal sætte alle skipe i ships placement.
-8. Tilføje sidste skip nr 4. (Submarine) size 3.
-9. Quit og Return to menu på Ship placement fix.
+8. Tilføje sidste skip nr 4. (Submarine) size 3. (Skal lige kigges igennem - Problem Battleplacement.java linje 176)
+9. Quit og Return to menu på Ship placement fix. (DONE)
 10. Quit og Return to menu lukker alle threds og JFrame's
 11. Overveje preformance, inf loop, måske lave nogle bake/timeout på serveren for undgå overbelastning.
+12. Automatisk IP.
+13. Lave battlefight.java battleplacement knapper utrykkelige. (Done)
 
 Skips:
 No.	Class of ship	Size
-1	Carrier	5
+1	Carrier	    5
 2	Battleship	4
-3	Cruiser	3
+3	Cruiser	    3
 4	Submarine	3
 5	Destroyer	2
 */
@@ -40,7 +42,7 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
     public JPanel contentnorth2, contentcenter2, contentsouth2, contentwest2;
     public static JButton quit, returnmenu, btnSend, connect, turn;
     public static JButton quit2, returnmenu2;
-    public JButton carrier, battleship, cruiser, destroyer;
+    public JButton carrier, battleship, cruiser, submarine, destroyer;
     public JTextArea beskeder, send;
     public JTextArea beskeder2;
     private int kcCheck = 5, kbCheck = 4, ksCheck = 3, khCheck = 2;
@@ -91,24 +93,24 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
 
         //Chat mm. - WEST
         contentwest = new JPanel();
+        contentwest.setLayout(new BorderLayout());
 
         beskeder = new JTextArea();
-        beskeder.setPreferredSize(new Dimension(150, 300));
-        beskeder.setLineWrap(true);
         beskeder.setEditable(false);
+        beskeder.setLineWrap(true);
+        // .setPreferredSize laver problemer med scroll.
+        //beskeder.setPreferredSize(new Dimension(150, 300));
+        //beskeder.setFont(new Font("Serif", Font.PLAIN, 15));
 
-        //scroll
-        JScrollPane scrollPane = new JScrollPane(beskeder);
-        new SmartScroller(scrollPane, SmartScroller.HORIZONTAL, SmartScroller.END);
-
-        //beskeder.setCaretPosition(beskeder.getDocument().getLength());
+        //Scroll
+        contentwest.add(new JScrollPane(beskeder), BorderLayout.CENTER);
 
         send = new JTextArea();
         send.setPreferredSize(new Dimension(60, 30));
 
         btnSend = new JButton("Send");
         btnSend.addActionListener(this);
-        contentwest.add(beskeder);
+        //contentwest.add(beskeder);
 
         contentwest.setSize(400, 400);
 
@@ -165,30 +167,50 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
         contentwest2.setLayout(new BoxLayout(contentwest2, BoxLayout.Y_AXIS));
 
         beskeder2 = new JTextArea();
-        beskeder2.setPreferredSize(new Dimension(100, 250));
-        beskeder2.setLineWrap(true);
+        //beskeder2.setPreferredSize(new Dimension(100, 250));
         beskeder2.setEditable(false);
+        beskeder2.setLineWrap(true);
+        //Scroll
+        contentwest2.add(new JScrollPane(beskeder2), BorderLayout.CENTER);
 
-        carrier = new JButton("   Carrier   ");
+        carrier = new JButton("  Carrier  ");
         battleship = new JButton("Battleship");
-        cruiser = new JButton("  Cruiser   ");
+        cruiser = new JButton("  Cruiser  ");
+        submarine = new JButton("Submarine");
         destroyer = new JButton("Destroyer");
 
         carrier.setBackground(Color.GREEN);
         battleship.setBackground(Color.GREEN);
         cruiser.setBackground(Color.GREEN);
+        submarine.setBackground(Color.GREEN);
         destroyer.setBackground(Color.GREEN);
+
+        carrier.setEnabled(false);
+        battleship.setEnabled(false);
+        cruiser.setEnabled(false);
+        submarine.setEnabled(false);
+        destroyer.setEnabled(false);
 
         contentwest2.add(carrier);
         contentwest2.add(battleship);
         contentwest2.add(cruiser);
+        contentwest2.add(submarine);
         contentwest2.add(destroyer);
+
+        //Laver problemer med spacing
         contentwest2.add(beskeder2);
 
+        //Mulig løsning - Virker ikke
+        contentwest2.add(Box.createHorizontalGlue());
+        contentwest2.add(Box.createVerticalGlue());
+
+        /*
         carrier.addActionListener(this);
         battleship.addActionListener(this);
         cruiser.addActionListener(this);
+        submarine.addActionListener(this);
         destroyer.addActionListener(this);
+        */
 
         defend.getContentPane().add(contentwest2, BorderLayout.WEST);
 
@@ -370,7 +392,6 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
                 }
             }
         }
-
         if (e.getSource() == quit) {
             System.exit(0);
         } else if (e.getSource() == returnmenu) {
@@ -378,8 +399,7 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
             Thread t = new Thread(game);
             t.start();
             setVisible(false);
-        }
-        if (e.getSource() == quit2) {
+        } else if (e.getSource() == quit2) {
             System.exit(0);
         } else if (e.getSource() == returnmenu2) {
             Game game = new Game();
