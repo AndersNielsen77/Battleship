@@ -8,12 +8,14 @@
     * Work in progress
     
 ## Work in progress                                            
-1. Forminsk chat i Ship placement.                       
-2. Forstør chat i battlefield.
-3. Fjerne to ekstra ships placement når man har supmit.
-4. Skriv i Battlefield om man har ramt.
-5. Auto scroll både battlefield og ships placement.
-6. Ny Din tur knap (Skrifter farve).
+1. Forminsk chat i Ship placement.
+2. Fjerne to ekstra ships placement når man har supmit.
+3. Skriv i Battlefield om man har ramt.
+4. Auto scroll både battlefield og ships placement.
+5. Ny Din tur knap (Skrifter farve).
+6. Skipe bliver rød når de er døde.
+7. Skal sætte alle skipe.
+8. Tilføje sidste skip nr 4. (Submarine) size 3.
     
 ## Meta
 
