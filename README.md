@@ -4,6 +4,11 @@
 ![](header.png)
 
 ## Release History
+* 0.0.3
+    * Auto scroll chat
+    * Your turn (Red/Green)
+    * "Quit" & "Return to menu" battlefight.java in Ship placement
+    * Make battlefight.java Ship placement buttons invisible
 * 0.0.2
     * Your turn button (Changing color)
     * Chat size
@@ -13,18 +18,19 @@
     * Work in progress
     
 ## Work in progress                                            
-1. Forminsk chat i Ship placement samt skipe tekst.
+1. Forminsk chat i Ship placement samt skibe tekst.
 2. Fjerne to ekstra ships placement når man har supmit.
 3. Skriv i Battlefield om man har ramt.
-4. Auto scroll både battlefield og ships placement.
+4. Auto scroll både battlefield og ships placement. (Semi DONE - Resize mangler)
 5. Ny din tur knap (Skrifter farve). (DONE)
 6. Skibe bliver rød når de er døde.
 7. Skal sætte alle skipe i ships placement.
-8. Tilføje sidste skip nr 4. (Submarine) size 3.
-9. Quit og Return to menu på Ship placement fix.
+8. Tilføje sidste skip nr 4. (Submarine) size 3. (Skal lige kigges igennem - Problem Battleplacement.java linje 176)
+9. Quit og Return to menu på Ship placement fix. (DONE)
 10. Quit og Return to menu lukker alle threds og JFrame's
 11. Overveje preformance, inf loop, måske lave nogle bake/timeout på serveren for undgå overbelastning.
 12. Automatisk IP.
+13. Lave battlefight.java battleplacement knapper utrykkelige. (Done)
     
 ## Meta
 
