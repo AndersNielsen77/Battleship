@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Battleship.iml" filepath="$PROJECT_DIR$/Battleship.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Battleship Client/Battleship Client.iml" filepath="$PROJECT_DIR$/Battleship Client/Battleship Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Battleship Server/Battleship Server.iml" filepath="$PROJECT_DIR$/Battleship Server/Battleship Server.iml" />
     </modules>
   </component>
 </project>
