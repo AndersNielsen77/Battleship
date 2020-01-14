@@ -8,6 +8,7 @@
     * Your turn button (Changing color)
     * Chat size
     * Executable jar files for Client and server
+    * Connect changes to Connecting.. and Connected
 * 0.0.1
     * Work in progress
     
