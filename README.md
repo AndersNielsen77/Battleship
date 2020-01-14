@@ -18,6 +18,7 @@
 8. Tilføje sidste skip nr 4. (Submarine) size 3.
 9. Quit og Return to menu på Ship placement fix.
 10. Quit og Return to menu lukker alle threds og JFrame's
+11. Overveje preformance, inf loop, måske lave nogle bake/timeout på serveren for undgå overbelastning.
     
 ## Meta
 
