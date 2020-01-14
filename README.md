@@ -5,9 +5,9 @@
 
 ## Release History
 * 0.0.2
-    * Your turn button (Changing color).
-    * Chat size.
-    * Executable jar files for Client and server. 
+    * Your turn button (Changing color)
+    * Chat size
+    * Executable jar files for Client and server
 * 0.0.1
     * Work in progress
     
