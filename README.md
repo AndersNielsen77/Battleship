@@ -29,7 +29,7 @@
 9. Quit og Return to menu på Ship placement fix. (DONE)
 10. Quit og Return to menu lukker alle threds og JFrame's
 11. Overveje preformance, inf loop, måske lave nogle bake/timeout på serveren for undgå overbelastning.
-12. Automatisk IP.
+12. Automatisk IP, eller indtastning af ip. Efter x antal tid automatisk connect til "localhost".
 13. Lave battlefight.java battleplacement knapper utrykkelige. (Done)
     
 ## Meta
