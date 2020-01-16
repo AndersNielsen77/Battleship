@@ -5,7 +5,7 @@
 
 ## Release History
 * 0.0.4
-    * 5. ship added
+    * Last ship added
 * 0.0.3
     * Auto scroll chat
     * Your turn (Red/Green)
