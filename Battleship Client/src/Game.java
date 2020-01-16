@@ -2,9 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.net.Socket;
 
 public class Game extends JFrame implements ActionListener, Runnable {
     private static final long serialVersionUID = 1L;
@@ -12,16 +9,6 @@ public class Game extends JFrame implements ActionListener, Runnable {
     public JPanel mainmenu;
     public JPanel contentcenter;
     public static JButton play, quit;
-    private static boolean joinedServer = false;
-    private static Socket socket = null;
-    //SERVER IP sæt til "localhost" når vi ikke er på DTU.
-    private final static String host = "localhost";
-    private final static int portNumber = 9991;
-    private static DataInputStream in = null;
-    private static DataOutputStream out = null;
-    private String enemyPlayer, playername;
-    private static boolean playerJoined = false;
-    private boolean inMenu = true;
 
     public Game() {
         getContentPane().setLayout(new BorderLayout());

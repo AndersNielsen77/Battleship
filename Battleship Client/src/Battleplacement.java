@@ -171,11 +171,10 @@ public class Battleplacement extends JFrame implements ActionListener, Runnable 
                     fields[j][i].setBackground(Color.YELLOW);
                 } else if (Plade.getGrid(j, i) == 3) {
                     fields[j][i].setBackground(Color.GREEN);
-                    //Problem
-                //} else if (Plade.getGrid(j, i) == 3) {
-                //    fields[j][i].setBackground(Color.GREEN);
                 } else if (Plade.getGrid(j, i) == 2) {
                     fields[j][i].setBackground(Color.ORANGE);
+                } else if (Plade.getGrid(j,i) == 1) {
+                    fields[j][i].setBackground(Color.MAGENTA);
                 }
             }
         }

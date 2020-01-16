@@ -4,14 +4,15 @@
 3. Skriv i Battlefield om man har ramt.
 4. Auto scroll både battlefield og ships placement. (Semi DONE - Resize mangler)
 5. Ny din tur knap (Skrifter farve). (DONE)
-6. Skibe bliver rød når de er døde.
+6. Skibe bliver rød når de er døde i venstre side.
 7. Skal sætte alle skipe i ships placement.
-8. Tilføje sidste skip nr 4. (Submarine) size 3. (Skal lige kigges igennem - Problem Battleplacement.java linje 176)
+8. Tilføje sidste skip nr 4. (Submarine) size 3. (Semi Done - Mangler at lave det 3 langt.)
 9. Quit og Return to menu på Ship placement fix. (DONE)
 10. Quit og Return to menu lukker alle threds og JFrame's
 11. Overveje preformance, inf loop, måske lave nogle bake/timeout på serveren for undgå overbelastning.
-12. Automatisk IP.
+12. Automatisk IP, eller indtastning af ip. Efter x antal tid automatisk connect til "localhost".
 13. Lave battlefight.java battleplacement knapper utrykkelige. (Done)
+14. Besked når man har ødelagt et helt skib.
 
 Skips:
 No.	Class of ship	Size
@@ -155,7 +156,7 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
 
         //Title
         contentnorth2 = new JPanel();
-        startTitle2 = new JLabel("<html><font size='10' color=white>Ships placement</font></html>", SwingConstants.CENTER);
+        startTitle2 = new JLabel("<html><font size='10' color=white>Ships</font></html>", SwingConstants.CENTER);
         contentnorth2.setBackground(new Color(59, 89, 182));
 
         contentnorth2.add(startTitle2);
@@ -445,6 +446,8 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
             return true;
         } else if (Plade.getGrid(j, i) == 2) {
             return true;
+        }  else if(Plade.getGrid(j,i) == 1) {
+            return true;
         } else {
             return false;
         }
@@ -482,6 +485,8 @@ public class Battlefight extends JFrame implements ActionListener, Runnable {
                     fields2[j][i].setBackground(Color.GREEN);
                 } else if (Plade.getGrid(j, i) == 2) {
                     fields2[j][i].setBackground(Color.ORANGE);
+                } else if (Plade.getGrid(j,i) == 1) {
+                    fields2[j][i].setBackground(Color.MAGENTA);
                 }
             }
         }
