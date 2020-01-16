@@ -34,6 +34,7 @@
 12. Automatisk IP, eller indtastning af ip. Efter x antal tid automatisk connect til "localhost".
 13. Lave battlefight.java battleplacement knapper utrykkelige. (Done)
 14. Besked når man har ødelagt et helt skib.
+15. Fix scroll så chat ikke forsvinder.
     
 ## Meta
 
